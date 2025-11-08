@@ -1,0 +1,89 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+#stopwatch-display {
+  text-align: center;
+  min-height: 100px;
+  font-size: 5em;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 0.8em 1.5em;
+  margin: 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003f7f;
+}
+
+#reset {
+  background-color: #dc3545;
+}
+
+#reset:hover {
+  background-color: #c82333;
+}
+
+#reset:active {
+  background-color: #bd2130;
+}
+
+/* Specific styles for time display elements */
+#minutes, #seconds, #milliseconds {
+  font-size: 1em; /* This will scale relative to the parent #stopwatch-display */
+}
+
+@media (max-width: 768px) {
+  #stopwatch-display {
+    font-size: 3em;
+    padding: 15px 30px;
+  }
+  button {
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #stopwatch-display {
+    font-size: 2.5em;
+    padding: 10px 20px;
+  }
+  button {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+  }
+}
